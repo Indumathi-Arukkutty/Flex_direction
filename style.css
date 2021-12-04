@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.maintag{
+    padding: 30px;
+}
+/* using flex property for image and para tags */
+.maincontent{
+    display: flex;
+}
+/* Setting width and height */
+.imgcontent img{
+    width: 200px;
+    height: 250px;
+}
+.para{
+    padding: 20px;
+}
+/* to reverse the para and image at even rows */
+.maincontent:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+/* setting width as 581 when screen has less size it will displa the data column wise */
+@media(max-width:581px)
+{
+    .maincontent{
+        flex-direction:column;
+    }
+    .maincontent:nth-child(even){
+        flex-direction: column;
+    }
+    
+}
